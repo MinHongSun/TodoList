@@ -4,7 +4,7 @@ import { ListItem, ListItemText, InputBase, Checkbox } from "@material-ui/core";
 class Todo extends React.Component{
     constructor(props){
         super(props);
-        this.state = { item:props.item };
+        this.state = { item: props.item };
       }
 
     render(){
@@ -14,13 +14,13 @@ class Todo extends React.Component{
                 <Checkbox checked={item.done} />
                 <ListItemText>
                     <InputBase 
-                    inputProps={{ "aria-label":"naked" }}
-                    type="text"
-                    id={item.id}
-                    name={item.id}
-                    value={item.title}
-                    //multiline={true}
-                    fullWidth={true}
+                        inputProps={{ "aria-label": "naked" }}
+                        type="text"
+                        id={item.id}
+                        name={item.id}
+                        value={item.title}
+                        multiline={true}
+                        fullWidth={true}
                     />
                 </ListItemText>
             </ListItem>
