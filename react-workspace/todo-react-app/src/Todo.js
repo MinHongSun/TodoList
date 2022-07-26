@@ -54,30 +54,30 @@ class Todo extends React.Component {
         return (
         <ListItem>
             <Checkbox checked={item.done} onChange={this.checkboxEventHandler} />
-            <ListItemText>
-            <InputBase
-                inputProps={{
-                "aria-label": "naked",
-                readOnly: this.state.readOnly,
-                }}
-                type="text"
-                id={item.id}
-                name={item.id}
-                value={item.title}
-                fullWidth={true}
-                onClick={this.offReadOnlyMode}
-                onChange={this.editEventHandler}
-                onKeyPress={this.enterKeyEventHandler}
-            />
-            </ListItemText>
+                <ListItemText>
+                    <InputBase
+                        inputProps={{
+                        "aria-label": "naked",
+                        readOnly: this.state.readOnly,
+                        }}
+                        type="text"
+                        id={item.id}
+                        name={item.id}
+                        value={item.title}
+                        fullWidth={true}
+                        onClick={this.offReadOnlyMode}
+                        onChange={this.editEventHandler}
+                        onKeyPress={this.enterKeyEventHandler}
+                    />
+                </ListItemText>
 
             <ListItemSecondaryAction>
-            <IconButton
-                aria-label="Delete Todo"
-                onClick={this.deleteEventHandler}
-            >
-                <DeleteOutlined />
-            </IconButton>
+                <IconButton
+                    aria-label="Delete Todo"
+                    onClick={this.deleteEventHandler}
+                >
+                    <DeleteOutlined />
+                </IconButton>
             </ListItemSecondaryAction>
         </ListItem>
         );
